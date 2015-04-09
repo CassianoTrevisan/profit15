@@ -1,0 +1,50 @@
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 
+ <div ng-app="ControlerApp">
+    <div ng-controller="ControlerCtrl">
+ <div class="form-group divMonthSelect">
+     <div ng-show="msgController"  ng-class="classMsgController" >{{msgController}}</div>     
+     
+     <div style="float:left;">
+      <label for="sel1">Selecione um mês:</label>
+
+      
+      <select class="form-control selectMonth" id="sel1" ng-model="selectedMonth" ng-change="changeDate()" >
+        <option value="1">Janeiro</option>
+        <option value="2">Fevereiro</option>
+        <option value="3">Março</option>
+        <option value="4">Abril</option>
+        <option value="5">Maio</option>
+        <option value="6">Junho</option>
+        <option value="7">Julho</option>
+        <option value="8">Agosto</option>
+        <option value="9">Setembro</option>
+        <option value="10">Outubro</option>
+        <option value="11">Novembro</option>
+        <option value="12">Dezembro</option>
+      </select>
+    </div> 
+    <div style="padding-left:400px;">
+    <label for="sel2">Selecione um ano:</label>
+      <select class="form-control selectYear" id="sel2" ng-model="selectedYear" ng-change="changeDate()">
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+      </select>
+     </div>
+ </div>
+        <div class="gridStyle" ng-grid="gridOptions"></div>
+        <a ng-show="editavel" ng-click="add()" class="btn btn-info add-button">Adicionar
+<!--         	<img src="../../img/icons/add-icon.png" height="25" width="25">  -->
+        </a>
+    </div>
+</div>
+
+
+
+
+

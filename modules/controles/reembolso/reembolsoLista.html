@@ -1,0 +1,95 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script>
+$(document).on('change', '.btn-file :file', function() {
+	console.log('on change')
+	  var input = $(this),
+	      numFiles = input.get(0).files ? input.get(0).files.length : 1,
+	      label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+	  input.trigger('fileselect', [numFiles, label]);
+	});
+	
+$(document).ready( function() {
+    $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
+        
+        var input = $(this).parents('.input-group').find(':text'),
+            log = numFiles > 1 ? numFiles + ' files selected' : label;
+        
+        if( input.length ) {
+            input.val(log);
+        } else {
+            if( log ) alert(log);
+        }
+        
+    });
+});
+</script>
+<style>
+.form-control {
+  
+  display: inline-block;
+  width: 340px;
+  margin-bottom: 10px;
+ 
+ } 
+ 
+label{
+	width: 35%;
+} 
+
+textarea{
+	margin-left: 3px;
+}
+</style>
+<div ng-app="reembolsoModule">
+
+	<div class="form-group" style="padding: 2%">
+		<div ng-show="error" ng-class="classMsg">{{error}}</div>
+		
+		<form  name="form" role="form">
+			<center> <h3>Notas de Reembolso</h3></center>
+			<input  id="id_usuario" ng-model="usuario.id_usuario" ng-hide="true">		
+			
+			<div>
+            	<label for="">Número da Nota</label>           
+            	<input type="text" maxLength="15" ng-model="reembolsoNota.numeroNota" class="form-control" required />            	
+        	</div>
+        	<div >
+            	<label for="">Emissor</label>           
+            	<input type="text" maxLength="100" ng-model="reembolsoNota.emissor" class="form-control" required />           	
+        	</div>
+        	
+        	<div >
+            	<label for="">Valor</label>           
+            	<input type="text" maxLength="15"  ng-model="reembolsoNota.valor" 
+            	       class="form-control" required ui-number-mask/>            	
+        	</div>
+        	
+        	
+        	<div >
+            	<label for="usuario.senha">Tipo</label>
+            	<select ng-model="reembolsoNota.tipo"
+            	 class="form-control" ng ng-options="tipo.id as tipo.nome for tipo in tiposReembolsoList" required />         	
+       		</div>
+        	
+        	
+        	<div >
+            	<label style="float:left">Descricao</label>           
+            	<textarea rows="4" cols="50" maxLength="500"  ng-model="reembolsoNota.descricao" class="form-control" />            	
+        	</div> 
+        	
+        	
+
+			<div >
+				<input class="form-control" type="file" nv-file-select="" uploader="uploader"/>
+ 	            
+            </div>
+        	
+        	
+        	<div class="form-actions">
+            	<input type="button" ng-disabled="form.$invalid || dataLoading" ng-click="save()" class="btn btn-danger" value="Salvar"/>
+            	<input type="button" class="btn btn-warning" ng-click="cancel()" value="Cancelar"/>
+            	<img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
+        	</div>
+		</form>	
+	</div>
+</div>

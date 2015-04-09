@@ -1,0 +1,11 @@
+<input ng-model="row.entity.hora_entrada" type="text" class="timepicker"></input>
+<script>
+
+jQuery('.timepicker').datetimepicker({
+	datepicker:false,
+	format:'H:i',
+	closeOnTimeSelect:true,
+	step:15
+});
+		
+</script>

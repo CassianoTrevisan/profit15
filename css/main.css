@@ -1,0 +1,289 @@
+/* 
+Custom CSS for...
+'Modern Business' HTML Theme by Start Bootstrap
+
+All Start Bootstrap themes are licensed under Apache 2.0. 
+For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap.com!
+*/
+
+/* Global Styles */
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+
+	background-image: url("../img/fundo_muro.jpg");
+    background-size: 100% 100%;
+    background-repeat: repeat-y;
+    padding-top: 10px;
+}
+
+.dropdown {
+    cursor:pointer;
+}
+
+
+.img-home-portfolio,
+.img-customer,
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+.tab-pane {
+    margin-top: 15px;
+}
+
+/* Page Sections */
+.section,
+.section-colored {
+    padding: 50px 0;
+}
+
+.section-colored {
+    background-color: #e1e1e1;
+    /* change this to change the background color of a colored section */
+}
+
+.sidebar {
+    margin-top: 40px;
+}
+
+.sidebar ul {
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #cccccc;
+}
+
+/* Half Page Height Carousel Customization */
+.carousel {
+    height: 50%;
+}
+
+.item,
+.active,
+.carousel-inner {
+    height: 100%;
+}
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Social Icons Styles */
+.list-social-icons {
+    margin-bottom: 45px;
+}
+
+.tooltip-social a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.facebook-link a:hover {
+    color: #3b5998;
+}
+
+.linkedin-link a:hover {
+    color: #007fb1;
+}
+
+.twitter-link a:hover {
+    color: #39a9e0;
+}
+
+.google-plus-link a:hover {
+    color: #d14836;
+}
+
+/* Service Page Styles */
+.service-icon {
+    font-size: 50px;
+}
+
+/* 404 Page Styles */
+.error-404 {
+    font-size: 8em;
+}
+
+/* Pricing Page Styles */
+.price {
+    font-size: 4em;
+}
+
+.price-cents {
+    vertical-align: super;
+    font-size: 50%;
+}
+
+.price-month {
+    font-size: 35%;
+    font-style: italic;
+}
+
+/* Footer Styles */
+footer {
+    margin: 50px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+
+    .carousel {
+        height: 70%;
+        /* increases the carousel height so it looks good on phones */
+    }
+}
+.gridStyle {
+    border: 1px solid rgb(212,212,212);
+    width: 60%;
+    height: 300px;
+    margin-left: 20%;
+    margin-top: 3%;
+    margin-bottom: 10px;
+}
+
+.loginStyle{
+	text-align: right;
+	padding-right: 20%;
+    width: 50%;
+    height: 300px;
+    margin-left: 25%;
+    margin-top: 3%;
+}
+
+.timepicker, .datepicker{
+	width: 98%;
+	border: none;
+	text-align: center;
+	padding-top: 5px;
+	background-color: transparent;
+}
+
+.add-button{
+	margin-left: 78%;
+}
+
+.errorStyle {
+    border: 1px solid rgb(212,212,212);
+    width: 60%;
+    height: 10%;
+    margin-left: 20%;
+    margin-top: 3%;
+    margin-bottom: 1px;
+}
+
+.divMonthSelect{
+	width: 100%;
+	padding: 3% 20% 0 20%;
+}
+
+.selectMonth{
+	width: 200px;
+	
+}
+
+.selectYear{
+	width: 200px;
+	
+}
+
+.tableStyle {
+	width: 50%;
+	margin-left: 25%;
+	border: 1px;
+	margin-top: 10px;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.proFitFontStyle{
+	font-size: 36px;
+	color: black;
+	font-family: AlmSerious;
+	letter-spacing: 3px;
+	font-weight: bolder;
+}
+
+.proFitNormalFont{
+	font-family: serif;
+	font-size: 22px;
+}
+
+.proFitMenuFont{
+	font-family: serif;
+	font-size: 22px;
+	font-variant: small-caps;
+	font-weight: bold !important;
+}
+
+a:focus, a:hover{
+	color: black;
+}
+
+.backColorChange{
+	background-color: orange;
+}
+
+.row{
+	background-color: white;
+	width: 80%;
+	margin-left: 10%;
+}
+
+.center{
+	text-align: center;
+}
+
+.imgBlusa{
+	cursor: pointer;
+	width: 450px;
+	height: 400px;
+}
+
+.orangeBackGr{
+	background-color: rgb(255, 126, 0);
+}
+
+ .container{
+ 	background-color: rgb(255, 126, 0);
+ 	width: 79%;
+ 	
+ }
+ 
+ .proFitTextoProduto{
+ 	color: rgb(255, 126, 0);
+ 	background-color: black;
+ 	cursor: pointer;
+ 	font-size: 22px;
+ 	text-decoration: none;
+ }
+ 
+ .proFitCaixaPreco{
+ 	background-color: rgb(255, 126, 0);
+ 	font-size: 20px;
+ 	color: black;
+ }

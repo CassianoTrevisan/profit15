@@ -1,0 +1,54 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<div ng-app="UsuariosApp">
+
+	<div class="form-group tableStyle">
+		<div ng-show="error" ng-class="classMsg">{{error}}</div>
+		
+		<form  name="form" role="form">
+			<center> <h3> Usuário</h3></center>
+			<input name="id_usuario" id="id_usuario" ng-model="usuario.id_usuario" ng-hide="true">			
+			
+			<div class="form-group">
+            	<label for="usuario.nome">Nome</label>           
+            	<input type="text" name="usuario.nome" id="usuario.nome" ng-model="usuario.nome" required />            	
+        	</div>
+        	<div class="form-group">
+            	<label for="usuario.login">Login</label>           
+            	<input type="text" name="usuario.login" id="usuario.login" ng-model="usuario.login" required />            	
+        	</div>
+        	
+        	<div class="form-group">
+            	<label for="usuario.email">E-Mail</label>           
+            	<input type="email" name="usuario.email" id="usuario.email" ng-model="usuario.email" required />            	
+        	</div>
+        	
+        	<div class="form-group">
+            	<label for="usuario.senha">Senha</label>
+            	<input type="password" name="usuario.senha" id="usuario.senha" ng-model="usuario.senha" />            	
+       		</div>
+       		<div class="form-group">
+            	<label for="usuario.senha2">confirma Senha</label>            	
+            	<input type="password" name="usuario.senha2" id="usuario.senha2" ng-model="usuario.senha2" />
+       		</div>
+       		<div class="form-group">
+            	<label for="usuario.ativo">Ativo</label>            	
+            	<select ng-model="usuario.ativo" required >
+            		<option value="1" >Ativo</option>
+            		<option value="0">Inativo</option>
+            	</select>            	
+       		</div>
+       		<div class="form-group">
+            	<label for="usuario.id_perfil">Perfil</label>         	
+            	<select ng-model="usuario.id_perfil" ng-options="perfil.id as perfil.nome for perfil in perfis" required />
+       		</div>
+		
+			<div class="form-actions">
+            	<input type="button" ng-disabled="form.$invalid || dataLoading" ng-click="save()" class="btn btn-danger" value="Salvar"/>
+            	<input type="button" class="btn btn-warning" ng-click="cancel()" value="Cancelar"/>
+            	<img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
+        	</div>
+        	 
+		</form>	
+	</div>
+</div>

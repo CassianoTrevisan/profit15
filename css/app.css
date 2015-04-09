@@ -1,0 +1,403 @@
+
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Index.html
+*/
+
+
+/* -----------------------------------------
+   Font Faces
+----------------------------------------- */
+
+@font-face {
+    font-family: 'proxima_nova_regular';
+    src: url('proximanova-regular-webfont.eot');
+    src: url('proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('proximanova-regular-webfont.woff') format('woff'),
+         url('proximanova-regular-webfont.ttf') format('truetype'),
+         url('proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+body {
+/*   margin-bottom: 7px; */
+/*   padding-right: 2px !important; */
+}
+
+h1, h2, h3, h4, h5 {
+  color: #111111;
+  font-family: "proxima_nova_regular", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+.subheader {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-weight: light;
+  font-weight: 300;
+}
+
+h5 {
+  padding-top: 5px;
+}
+
+li.active {
+  background-color: transparent !important;
+  color: #000 !important;
+}
+
+li.active a {
+  color: #000 !important;
+}
+
+li.mobile-two {
+  padding-left: 3px;
+  padding-right: 3px;  
+}
+
+#pageHeader{
+  background-color: #fff;
+  padding: 14px 0 13px 0;
+}
+
+#pageHeader h1 {
+  display: block;
+  margin: 0px 0 0 12px;
+  white-space: nowrap;
+}
+
+#pageHeader h1 a{
+  font-family: Candara;
+  font-weight: 100;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: #000;
+}
+
+#pageHeader h1:before{
+  content: url('../img/Younionlogo.png') !Important;
+  float: left!Important;
+  z-index: 3;
+  margin: 5px -31px 0px -15px !Important;
+  padding: 0px !Important;
+}
+
+#pageHeader h1:first-letter{
+  color: transparent !important;
+}
+
+.nav-bar {
+  background-color: #FFF;
+  margin: 3px 0 0 58px !important;
+  padding: 0px;
+  white-space: nowrap;
+  line-height: 22px;
+}
+
+.nav-bar li {
+  border: none !important;
+  padding: 0px;
+  min-width: 90px; 
+}
+
+.nav-bar li a{
+  font-size: 16px !important;
+  color: #666;
+  padding: 0px 32px 0px 0px !important;
+}
+
+.nav-bar li.mobile-four {
+  padding: 0;
+}
+
+.nav-bar li a:hover{
+  color: #000;
+}
+
+.nav-bar li:hover{
+  background-color: transparent;
+}
+
+#loginYounionIt {
+  white-space: nowrap;
+  margin-top: 15px !important;
+  margin-right: 0px;
+}
+
+.mainSectionHeader {
+  background: url('../img/bg-home.jpg') no-repeat scroll center 0px white;
+}
+
+.sectionPage {
+  background: url('../img/strip-bg.jpg') no-repeat center 87px white;
+}
+
+.smallStripe {
+  background: url('../img/smallStripe-bg.jpg') no-repeat center 87px white;
+}
+
+.bigBg {
+  background: url('../img/bg-big.jpg') no-repeat center 87px white;
+}
+
+.semBorda {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.articles{
+  padding-left: 5px;
+  margin-top: 25px;
+}
+
+.article {
+  text-align: center;
+}
+
+ul.breadcrumbs {
+  background: none repeat scroll 0 0 transparent;
+  border: none;
+  display: block;
+  overflow: hidden;
+  padding: 17px 10px 0px 15px;
+}
+
+ul.breadcrumbs a:hover{
+  text-decoration: none;
+}
+
+/* -----------------------------------------
+   Footer Unit */
+
+.footer-unit {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 7px;
+  margin-top: 41px;
+  padding: 0;
+  background-color: #fff;
+}
+
+#footerNavigation {
+  padding-right: 0px;
+  min-width: 290px;
+}
+
+#footerNavigation ul{
+  list-style-type: none;
+  float: left;
+  line-height: 25px;
+  padding: 5px 0;
+  margin-bottom: 0px;
+  white-space: nowrap;
+}
+
+#footerNavigation ul li {
+  white-space: nowrap;
+  display:inline;
+  margin-left: 3px;
+  margin-right: 15px;
+}
+
+#footerNavigation ul li a{
+  font-size: 12px;
+}
+
+#footerNavigation ul li a:hover{
+  color:#000000;
+}
+
+#footerNavigation ul:last-child {
+  margin-right: 0px;
+}
+
+#footerLogoPlacer{
+  float: left;
+  height: 25px;
+  width: 87px;
+  padding: 0px;
+  margin-right: 31px;
+  margin-top: 5px;
+}
+
+#footerDisclaimer {
+  font-size: 11px;
+  color: #999999;
+  padding: 0px 3px;
+  line-height: 16px;
+}
+
+/* -----------------------------------------
+   Page index.html
+----------------------------------------- */
+
+.hero-unit {
+  padding-left: 0px;
+}
+
+.hero-unit .row {
+  position: relative;
+  height: 445px;
+}
+
+.heroValign {
+  position: absolute;
+  top: 50%;
+  margin-top: -106px;
+}
+
+#hero h1 {
+  font-size: 38px;
+  line-height: 43px;
+  letter-spacing: -1px;
+}
+
+#hero h3 {
+ margin-top: 16px;
+}
+
+#hero h4 {
+  padding-top: 0px;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 27px;
+  color: inherit;
+}
+
+.banner-unit {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#bannerValign {
+}
+
+#mainBanner {
+  background-color: transparent;
+  padding: 0px;
+  max-height: 422px;
+  max-width: 548px;
+}
+
+/* -----------------------------------------
+   Orbit FIX ----------------------------------------- */
+#playContent { background: url("../img/ajax-loader.gif") center center #FFFFFF no-repeat; height: 422px;}
+#playContent img { display: none; }
+#playContent.orbit { background: none; }
+#playContent.orbit img { display: block; }
+ul.orbit-bullets {
+  bottom: -35px;
+  left: 69px;
+}
+/* -----------------------------------------
+   Orbit FIX ----------------------------------------- */
+  
+.articleIcon {
+  height: 128px;
+  border: 1px solid red;
+  border: 1px none;
+  width: 100%;
+  min-width: 128px;
+}
+
+.article h4 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.heroIcon{
+ cursor: pointer;
+}
+
+.heroIcon:hover{
+ background-color: #fff;
+}
+
+/*
+#bprimg {
+  height: 445px;
+  width: 100%;
+  background: url('../img/Business Process Review.jpg') no-repeat top center transparent;
+  min-width: 610px;
+}
+
+
+#seeBusinessModels {
+  background: url('../img/icons/Search.png') no-repeat top center transparent;
+}
+
+#seeBusinessResults  {
+  background: url('../img/icons/Task Manager.png') no-repeat top center transparent;
+}
+
+#seeBusinessImprovement {
+  background: url('../img/icons/Lightbulb.png') no-repeat top center transparent;
+}
+
+#seeBusinessDeployment {
+  background: url('../img/icons/MSN.png') no-repeat top center transparent;
+}
+*/
+.clickable{
+  cursor: pointer;
+}
+
+/* -----------------------------------------
+   Page contato.html
+----------------------------------------- */
+
+#seeLocationMaps {
+  background: url('../img/icons/Home.png') no-repeat top center transparent;
+}
+
+#seeSupport {
+  background: url('../img/icons/Mouse.png') no-repeat top center transparent;
+}
+
+#seeEmails {
+  background: url('../img/icons/IM.png') no-repeat top center transparent;
+}
+
+/* -----------------------------------------
+   Page descubra.html
+----------------------------------------- */
+#seeStrategy {
+  background: url('../img/icons/chess.jpg') no-repeat center center transparent;
+}
+
+#seeProcs {
+  background: url('../img/icons/icon_knowledge_white.jpg') no-repeat center center transparent;
+}
+
+#seePeople {
+  background: url('../img/icons/people.png') no-repeat center center transparent;
+}
+
+#seeSystems {
+  background: url('../img/icons/GearWhite.png') no-repeat center center transparent;
+}
+
+/* -----------------------------------------
+   Page soluções.html
+----------------------------------------- */
+
+.mainSection article h5{
+  cursor: pointer;
+  color: #2BA6CB;
+}
+
+.mainSection article h5::before{
+  content: "»";
+  color: #333;
+}
+
+.mainSection article h5:hover{
+  color: #000;
+}

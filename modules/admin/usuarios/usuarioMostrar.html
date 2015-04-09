@@ -1,0 +1,221 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+.form-control {
+  
+  display: inline-block;
+  width: 340px;
+  margin-bottom: 10px;
+ 
+ } 
+ 
+label{
+	width: 35%;
+} 
+</style>
+<div ng-app="UsuariosApp">
+
+	<div class="form-group" style="padding: 2%">
+		<div ng-show="error" ng-class="classMsg">{{error}}</div>
+		<form  role="form">
+			<center> <h3>Dados Pessoais</h3></center>
+			<input name="id_usuario" ng-model="usuario.id_usuario" ng-hide="true">			
+			
+			<div>
+            	<label>Nome:</label>
+            	<span>{{usuario.nome}}</span>            	
+        	</div>
+        	
+        	<div>
+            	<label for="nome">Data Nascimento:</label>
+            	<input ng-show="editavel" type="text" ng-model="usuario.data_nascimento" id="data_nascimento" class="form-control" />            	
+            	<span ng-hide="editavel" >{{usuario.data_nascimento | date:'dd/MM/yyyy'}}</span>
+        	</div>
+        	
+        	<div>
+            	<label for="nome">Telefone Residencial:</label>
+            	<span ng-hide="editavel" >{{usuario.telefone_residencial }}</span>
+            	<input ng-show="editavel" type="text" ng-model="usuario.telefone_residencial" class="form-control" />            	
+        	</div>
+        	
+        	<div>
+            	<label for="nome">Telefone Celular:</label>
+            	<span ng-hide="editavel" >{{usuario.telefone_celular }}</span>
+            	<input ng-show="editavel" type="text" ng-model="usuario.telefone_celular" class="form-control" />            	
+        	</div>
+        	
+        	<accordion close-others="true">
+        	
+        		<accordion-group heading="Contratação">
+        			
+        			<div>
+		            	<label for="nome">Tipo de Contratação:</label>
+		            	<span ng-hide="editavel" >{{usuario.nome_contratacao +" - "+ usuario.descricao_contratacao}}</span>
+		            	<select ng-show="editavel" ng-model="usuario.id_contratacao" ng-options="tipo.id as tipo.nome for tipo in tipoContratacao" />            	
+	        		</div>
+	        		
+        			<div>
+		            	<label for="nome">Cargo:</label>
+		            	<span ng-hide="editavel" >{{usuario.cargo}}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.cargo" class="form-control" />            	
+	        		</div>
+	        		
+	        		
+        		</accordion-group>
+        		
+	        	<accordion-group heading="Endereço">
+	     			<div>
+		            	<label for="nome">Endereço:</label>
+		            	<span ng-hide="editavel" >{{usuario.endereco }}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.endereco" class="form-control" />            	
+	        		</div>
+	        		
+	        		<div>
+		            	<label for="nome">Bairro:</label>
+		            	<span ng-hide="editavel" >{{usuario.bairro }}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.bairro" class="form-control" />            	
+	        		</div>
+	        		
+	        		<div>
+		            	<label for="nome">Municipio:</label>
+		            	<span ng-hide="editavel" >{{usuario.municipio }}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.municipio" class="form-control" />            	
+	        		</div>
+	        		
+	        		<div>
+		            	<label for="nome">CEP:</label>
+		            	<span ng-hide="editavel" >{{usuario.cep }}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.cep" class="form-control" />            	
+	        		</div>
+	        		
+	   			</accordion-group>
+	   			
+	   			<accordion-group heading="Documentos">
+	     			<div>
+		            	<label for="nome">CPF:</label>
+		            	<span ng-hide="editavel" >{{usuario.cpf }}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.cpf" class="form-control" />            	
+	        		</div>
+	        		
+	        		<div>
+		            	<label for="nome">RG:</label>
+		            	<span ng-hide="editavel" >{{usuario.rg }}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.rg" class="form-control" />            	
+	        		</div>
+	        		
+	        		<div>
+		            	<label for="nome">Orgão Emissor:</label>
+		            	<span ng-hide="editavel" >{{usuario.orgao_emissor_rg }}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.orgao_emissor_rg" class="form-control" />            	
+	        		</div>
+	        		
+	   			</accordion-group>
+	   			
+	   			<accordion-group heading="Carteira de Trabalho">
+	   				
+	   				<div>
+		            	<label for="nome">Carteira Trabalho:</label>
+		            	<span ng-hide="editavel" >{{usuario.numero_ctps }}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.numero_ctps" class="form-control" />            	
+	        		</div>
+	        		
+	        		<div>
+		            	<label for="nome">PIS:</label>
+		            	<span ng-hide="editavel" >{{usuario.pis_ctps }}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.pis_ctps" class="form-control" />            	
+	        		</div>
+	        		
+	        		<div>
+		            	<label for="nome">Série:</label>
+		            	<span ng-hide="editavel" >{{usuario.serie_ctps }}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.serie_ctps" class="form-control" />            	
+	        		</div>	
+	        		
+	        		<div>
+		            	<label for="nome">UF:</label>
+		            	<span ng-hide="editavel" >{{usuario.uf_ctps }}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.uf_ctps" class="form-control" />            	
+	        		</div>
+	   			</accordion-group>
+	   			
+	   			<accordion-group heading="Transporte">
+	   			
+	   				<div>
+		            	<label for="nome">Número do Cartão Transporte:</label>
+		            	<span ng-hide="editavel" >{{usuario.ct_numero }}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.ct_numero" class="form-control" />            	
+	        		</div>
+	        		
+	        		<div>
+		            	<label for="nome">SIC do Cartão Transporte:</label>
+		            	<span ng-hide="editavel" >{{usuario.ct_sic }}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.ct_sic" class="form-control" />            	
+	        		</div>
+	        		
+	   			</accordion-group>
+	   			
+	   			<accordion-group heading="Empresa">
+	     			<div>
+		            	<label for="nome">CNPJ:</label>
+		            	<span ng-hide="editavel" >{{usuario.cnpj }}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.cnpj" class="form-control" />            	
+	        		</div>
+	        		
+	        		<div>
+		            	<label for="nome">Razão Social:</label>
+		            	<span ng-hide="editavel" >{{usuario.razao_social }}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.razao_social" class="form-control" />            	
+	        		</div>
+	        		
+	   			</accordion-group>
+	   			
+	   			<accordion-group heading="Dados Bancário">
+	   				
+	   				<div>
+		            	<label for="nome">Banco:</label>
+		            	<span ng-hide="editavel" >{{usuario.nome_banco }}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.nome_banco" class="form-control" />            	
+	        		</div>
+	   			
+	   				<div>
+		            	<label for="nome">Agência:</label>
+		            	<span ng-hide="editavel" >{{usuario.agencia_banco }}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.agencia_banco" class="form-control" />            	
+	        		</div>
+	        		
+	   				<div>
+		            	<label for="nome">Conta:</label>
+		            	<span ng-hide="editavel" >{{usuario.conta_banco }}</span>
+		            	<input ng-show="editavel" type="text" ng-model="usuario.conta_banco" class="form-control" />            	
+	        		</div>
+	        		
+	   			</accordion-group>
+	   			
+        	</accordion>
+			
+        	
+        	
+        	
+			<div class="form-actions">
+				<input type="button"  ng-show="editavel" ng-disabled="form.$invalid || dataLoading" ng-click="salvar()" class="btn btn-danger" value="Salvar"/>
+            	<input type="button" class="btn btn-warning" ng-click="cancel()" value="Cancelar"/>
+            	<input type="button" class="btn btn-warning" ng-click="editar()" value="Editar"/>
+            	<img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
+        	</div>
+        	
+        	 
+		</form>	
+	</div>
+</div>
+
+
+<script>
+	var currentDate = new Date();
+	var defaultDate = new Date(currentDate.getFullYear(), currentDate.getMonth() -1, 1);
+	jQuery('#data_nascimento').datetimepicker({
+		lang:'pt',
+		format:'d/m/Y',
+		timepicker:false,
+		closeOnDateSelect:true,
+		defaultDate: defaultDate		
+	});
+</script>

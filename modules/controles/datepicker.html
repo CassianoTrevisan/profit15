@@ -1,0 +1,23 @@
+<input ng-model="row.entity.data" type="text" class="datepicker"></input>
+
+
+<script>
+		var sel1 = $("#sel1");
+		var sel2 = $("#sel2");
+		
+ 		var month = sel1.val();
+ 		var year = sel2.val();
+ 		var startDate = new Date(year,month-1, 1);
+ 		var endDate = new Date(year,month);
+ 		endDate.setDate(0);
+		
+		jQuery('.datepicker').datetimepicker({
+			lang:'pt',
+			format:'d/m/Y',
+			timepicker:false,
+			closeOnDateSelect:true,
+  			minDate: startDate,
+  			maxDate: endDate 
+		});
+	
+</script>
