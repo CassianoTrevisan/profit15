@@ -462,7 +462,8 @@ console.log(dir);
     var filesystem = require("fs");
     var results = [];
     //var folderPath = replaceAll(__dirname+dir, "/","\\");
-    var folderPath = replaceAll(dir, "/","\\");
+    //var folderPath = replaceAll(dir, "/","\\");
+    var folderPath = __dirname+dir;
     
     console.log("folderPath");
     console.log(folderPath);
