@@ -1,6 +1,10 @@
 {
   "name": "PRO-FIT",
   "version": "0.1.0",
+  "scripts": {
+	  "start": "node appExpress.js"
+	},
+  "main": "appExpress.js",
   "dependencies": {
     "express": "4.*",
     "mysql": "*",
