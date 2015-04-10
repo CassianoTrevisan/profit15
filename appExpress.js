@@ -461,7 +461,10 @@ console.log("dir = ");
 console.log(dir);
     var filesystem = require("fs");
     var results = [];
-    var folderPath = replaceAll(__dirname+dir, "/","\\");
+    //var folderPath = replaceAll(__dirname+dir, "/","\\");
+    var folderPath = replaceAll(dir, "/","\\");
+    
+    console.log("folderPath");
     console.log(folderPath);
     
     var filesList = filesystem.readdirSync(folderPath);
